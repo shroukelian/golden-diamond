@@ -6,7 +6,7 @@ body {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.8;
-        overflow-x: hidden; 
+    overflow-x: hidden; 
 
 }
 
@@ -22,7 +22,7 @@ body {
 }
 html {
     scroll-behavior: smooth; 
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 /* حاوية المحتوى */
 .container {
@@ -463,21 +463,28 @@ main section {
 
 /* تنسيق معرض الصور (شبكة صور) */
 .image-gallery {
+    /* تم التعديل: زيادة الحد الأدنى للعرض لعمود واحد في الشبكة */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* شبكة متجاوبة */
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; /* زيادة التباعد بين الصور لتبدو أكثر تنظيماً */
     margin-bottom: 40px;
 }
 
 .gallery-image {
     width: 100%;
-    height: auto; /* لإظهار الصورة كاملة */
-    object-fit: contain; /* للحفاظ على نسبة الأبعاد */
+    /* --------------------------------- */
+    /* التعديل: إعادة تعيين ارتفاع بسيط للصور لتثبيتها في الـ Grid */
+    display: block; /* لضمان أن الصورة تتصرف بشكل صحيح داخل الـ Grid */
+    height: 350px; /* تم إرجاع ارتفاع ثابت (أو شبه ثابت) لتحسين شكل الـ Grid */
+    object-fit: cover; /* تم التعديل: استخدام cover لملء الإطار دون فوضى */
+    /* --------------------------------- */
+    
     border-radius: 8px;
     background-color: var(--light-color); /* خلفية بيضاء للإطار */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    padding: 15px; 
+    padding: 10px; /* تقليل البادينج */
+    border: 1px solid #ddd; /* إضافة إطار خفيف */
 }
 
 .gallery-image:hover {
@@ -900,5 +907,23 @@ main section {
         width: 100%;
         margin-right: auto;
         margin-left: auto;
+    }
+     .sub-gallery {
+        padding-left: 15px;
+        padding-right: 15px; 
+    }
+    
+    .image-gallery {
+        grid-template-columns: 1fr; /* عمود واحد في وضع الهاتف */
+        gap: 20px;
+        /* التعديل: توسيط صور الشبكة */
+        justify-items: center; 
+    }
+    
+    .gallery-image {
+        height: 300px;
+        max-width: 95%; /* تحديد أقصى عرض لتجنب تجاوز الشاشة */
+        width: 100%; /* يجب أن يكون 100% داخل الـ max-width */
+        margin: 0 auto; /* توسيط الصورة نفسها داخل الخلية */
     }
 }
