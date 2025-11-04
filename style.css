@@ -1,0 +1,756 @@
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* الألوان الأساسية */
+:root {
+    --primary-color: #262626; /* أسود داكن لشريط التنقل */
+    --secondary-color: #c7a000; /* ذهبي (الماسة الذهبية) */
+    --whatsapp-color: #25D366; 
+    --hero-bg-color: #434658; /* لون الخلفية الداكن الجديد لقسم الهيرو */
+    --light-color: #ffffff;
+    --dark-color: #333333;
+    --section-bg: #eeeeee;
+}
+html {
+    scroll-behavior: smooth; /* الخاصية الأهم: تجعل الانتقال ناعماً عند النقر على الروابط الداخلية */
+}
+/* حاوية المحتوى */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.menu-toggle {
+    display: none; /* تم التعديل: إخفاؤه افتراضياً */
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* تنسيق الهيدر والتنقل */
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.contact-button .btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border-color: var(--secondary-color);
+    padding: 8px 15px; 
+    font-size: 0.9rem;
+    border-radius: 5px; /* شكل مربع أكثر في الهيدر */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex; /* لجعل النص والصورة متجاورين */
+    align-items: center;
+    gap: 10px; /* المسافة بين اللوجو والنص */
+}
+
+.logo-img {
+    width: 35px; /* حجم مناسب للوجو */
+    height: 35px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* إضافة ظل خفيف للوجو */
+}
+
+.logo a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links li a i {
+    margin-left: 5px;
+}
+
+
+/* تنسيق الأزرار العامة */
+.btn {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px; 
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid;
+}
+
+.btn i {
+    margin-right: 8px;
+    margin-left: 0 !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: transparent; 
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* --------------------------------- */
+/* تنسيق قسم البطل (Hero Section) */
+/* --------------------------------- */
+.hero-section {
+     position: relative;
+    /* إضافة صورة الخلفية مع تظليل مناسب */
+    background: var(--hero-bg-color) url('images/photo1.jpeg') center center no-repeat;
+    background-size: cover;
+    color: var(--light-color);
+    padding: 120px 0;
+    text-align: center;
+    min-height: 450px;
+}
+
+.hero-overlay {
+     background-color: rgba(0, 0, 0, 0.2); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    margin-top: 0;
+    line-height: 1.3;
+}
+
+.btn-primary.call-btn {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border-color: var(--secondary-color);
+    padding: 15px 35px;
+    font-size: 1.2rem;
+}
+.btn-secondary.whatsapp-hero-btn {
+    background-color: var(--whatsapp-color);
+    border-color: var(--whatsapp-color);
+    color: var(--light-color);
+    padding: 15px 35px;
+    font-size: 1.2rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+     display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.call-btn, .whatsapp-hero-btn {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+}
+
+/* تنسيق زر الواتساب في الهيرو */
+.whatsapp-hero-btn {
+    background-color: var(--whatsapp-color);
+    border-color: var(--whatsapp-color);
+    color: var(--light-color);
+}
+
+
+/* --------------------------------- */
+/* تنسيق الأقسام الداخلية */
+/* --------------------------------- */
+main section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+/* --------------------------------- */
+/* تنسيق قسم الخدمات (uniforms-section) */
+/* --------------------------------- */
+.uniforms-section {
+    background-color: var(--section-bg);
+}
+
+.uniform-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.uniform-item {
+    flex-basis: calc(33.33% - 20px);
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 300px;
+}
+
+.uniform-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.item-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.features, .suitable-for {
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.features strong, .suitable-for strong {
+    color: var(--secondary-color);
+}
+
+.gallery-section {
+    background-color: var(--section-bg);
+}
+
+.video-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 60px 0 30px 0;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+}
+
+/* تنسيق معرض الصور (شبكة صور) */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* شبكة متجاوبة */
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px; /* ارتفاع ثابت للصور */
+    object-fit: contain; /* لضمان تغطية الصورة للمساحة دون تشويه */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق معرض الفيديوهات */
+.video-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* عمودين للفيديوهات */
+    gap: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* نسبة 16:9 للحفاظ على أبعاد الفيديو */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.why-us-section {
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: right;
+}
+
+.features-list li {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border-right: 5px solid var(--secondary-color);
+}
+
+.features-list li i {
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+.big-cta-btn {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+}
+
+
+/* --------------------------------- */
+/* تنسيق قسم التواصل (contact-section) */
+/* --------------------------------- */
+.contact-section {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 80px 0; /* زيادة البادينج قليلاً لإعطاء مساحة أكبر */
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 40px; /* زيادة المسافة بعد العنوان الرئيسي */
+}
+
+.contact-item {
+    flex-basis: 300px;
+    padding: 20px;
+    border-right: 2px solid var(--secondary-color);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.contact-item a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-link {
+    color: var(--whatsapp-color) !important;
+    font-size: 1.1rem;
+}
+
+
+/* --------------------------------- */
+/* تنسيق الفوتر (تذييل الصفحة) وزر الواتساب العائم */
+/* --------------------------------- */
+/* --------------------------------- */
+/* 5. تنسيق الفوتر والأزرار العائمة (Fixed Buttons) */
+/* --------------------------------- */
+
+/* تنسيق الـ Footer الرئيسي */
+.main-footer {
+    background-color: #262626; /* لون أزرق داكن/رمادي غامق مثل الصورة */
+    color: var(--light-color);
+    padding: 60px 0 0 0; /* مساحة علوية فقط */
+    position: relative;
+    font-size: 1rem;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+.footer-col {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.main-footer h3 {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--secondary-color); /* خط ذهبي تحت العنوان */
+    display: inline-block;
+}
+
+/* تنسيق معلومات الاتصال */
+.contact-item-footer {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact-item-footer i {
+    color: var(--secondary-color);
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-item-footer h4 {
+    color: var(--secondary-color);
+    display: inline;
+    font-weight: 700;
+}
+
+.contact-item-footer p, 
+.contact-item-footer a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.details-link, .whatsapp-link-footer {
+    color: var(--secondary-color) !important;
+    text-decoration: underline !important;
+    font-size: 0.9rem;
+}
+
+/* تنسيق الروابط السريعة */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.links-col ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* تنسيق التوصل الاجتماعي */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: var(--light-color);
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-footer-cta {
+    display: inline-block;
+    background-color: #ff8c00; 
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+
+
+/* شريط الحقوق (الأسفل) */
+.copyright-bar {
+    background-color: #262626; /* لون أغمق */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ... (باقي التنسيقات العائمة و Media Queries) ... */
+
+/* التعديل في Mobile Responsiveness لترتيب الفوتر */
+@media (max-width: 900px) {
+    /* ... (تنسيقات الموبايل الأخرى) ... */
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-col {
+        flex-basis: 100%;
+        min-width: unset;
+        margin-bottom: 40px;
+    }
+
+    .main-footer h3 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .links-col ul {
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+    z-index: 1000;
+}
+
+.whatsapp-btn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--whatsapp-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* حاوية الأزرار العائمة */
+.floating-contact-group {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* تنسيق الأزرار العائمة الأساسي */
+.floating-btn {
+    display: block;
+    width: 55px; /* تصغير الحجم قليلاً ليناسب الزرين */
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: var(--light-color);
+    border-radius: 50%;
+    font-size: 1.8rem; /* تصغير حجم الأيقونة قليلاً */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 1. زر الاتصال (ذهبي) */
+.call-float-btn {
+    background-color: var(--secondary-color); /* اللون الذهبي */
+}
+
+/* 2. زر الواتساب (أخضر) */
+.whatsapp-float-btn {
+    background-color: var(--whatsapp-color); /* اللون الأخضر */
+}
+
+/* --------------------------------- */
+/* -- التنسيق المتجاوب (Mobile Responsiveness) -- */
+/* --------------------------------- */
+@media (max-width: 900px) {
+    
+    /* --------------------------------- */
+    /* تحسين الهيدر في الموبايل */
+    /* --------------------------------- */
+    .nav-links { display: none; }
+    .contact-button { display: none; } /* إخفاء زر "اتصل الآن" المزدحم في الهيدر */
+    .menu-toggle { display: block; } /* إظهار زر القائمة (3 شرطات) */
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 55px; /* تحت الهيدر */
+        left: 0;
+    }
+
+    /* تكبير حجم الخطوط الرئيسية */
+    .section-title { font-size: 2rem; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content h2 { font-size: 1.8rem; }
+    
+    /* تنسيق أزرار الهيرو */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* .call-btn, .whatsapp-hero-btn {
+        width: 100%;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    } */
+
+    /* تنسيق أقسام الخدمات */
+    .uniform-item {
+        flex-basis: 100%;
+        min-width: unset;
+    }
+
+    /* تنسيق معرض الفيديوهات */
+    .video-gallery {
+        grid-template-columns: 1fr; /* عمود واحد للفيديوهات في وضع الهاتف */
+    }
+
+    /* تنسيق قسم التواصل */
+    .contact-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-item {
+        border-right: none;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .contact-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* --------------------------------- */
+    /* الأزرار العائمة في وضع الهاتف */
+    /* --------------------------------- */
+    .floating-contact-group {
+        flex-direction: column; /* تم التعديل: لجعلها فوق بعضها (موبايل) */
+        left: 20px; /* العودة إلى اليسار لعدم التوسيط */
+        transform: none; /* إلغاء التوسيط */
+        bottom: 10px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 60px; 
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.8rem;
+    }
+}
