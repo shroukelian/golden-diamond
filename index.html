@@ -16,11 +16,12 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="almasa-logo.png" alt="شعار الماسة الذهبية" class="logo-img">
+                <img src="images/logo-removebg-preview (3).png" alt="شعار الماسة الذهبية" class="logo-img">
                 <a href="#">الماسة الذهبية</a>
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن؟</a></li>
                 <li><a href="#services-list"><i class="fas fa-tshirt"></i> خدماتنا</a></li>
                 <li><a href="#gallery"><i class="fas fa-camera"></i> معرض الأعمال</a></li>
                 <li><a href="#why-us"><i class="fas fa-gem"></i> لماذا نختارنا؟</a></li>
@@ -56,8 +57,38 @@
                 </div>
             </div>
         </section>
+         <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">من نحن؟ <br>مؤسسة الماسة الذهبية للزي الموحد</h2>
+                        <p class="lead-text">
+                            تأسست **مؤسسة الماسة الذهبية** لتكون شريك النجاح للشركات والمؤسسات التي تبحث عن التميز والاحترافية في مظهر فريق عملها.
+                        </p>
+                        <p>
+                            نحن متخصصون في تصميم وتصنيع وتوريد جميع أنواع **الأزياء الموحدة**، بدءاً من الأطقم الإدارية الراقية وصولاً إلى أزياء العمل الصناعية الآمنة والمريحة.
+                        </p>
+                        <p>
+                            في الماسة الذهبية، لا نبيع ملابس، بل نقدم **هوية بصرية متكاملة** تعكس جودة علامتك التجارية. نعتمد على أفضل الخامات المستوردة والمحلية، ونعمل بأحدث ماكينات القص والتطريز والطباعة لضمان دقة التنفيذ والتفصيل في جميع المقاسات.
+                        </p>
+                        <div class="about-contact-cta">
+                            <a href="#footer" class="btn btn-primary big-cta-btn">تواصل معنا لمعرفة المزيد</a>
+                        </div>
+                    </div>
+                    
+                    <!-- يمكن وضع صورة للشركة أو الشعار هنا -->
+                    <div class="about-image-box">
+                        <img src="images/photo5.jpeg" alt="رؤية الشركة وجودة العمل" class="about-main-img">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- قسم الخدمات - تم دمج المحتوى الذي أرسلته مع تنسيق احترافي -->
+
+
+        <!-- --------------------------------------- -->
+        <!-- قسم الخدمات - تم إضافة زر "مشاهدة الصور" -->
+        <!-- --------------------------------------- -->
         <section id="services-list" class="uniforms-section">
             <div class="container">
                 <div style="text-align:center; margin-bottom:40px;">
@@ -71,16 +102,16 @@
                 </div>
 
                 <div class="uniform-grid">
+
                     <!-- 1. الأزياء الإدارية والمكتبية -->
                     <div class="uniform-item">
                         <div class="icon-box">👔</div>
                         <h3 class="item-title">الأزياء الإدارية والمكتبية</h3>
                         <p>نُقدّم أطقم مكتبية أنيقة تعكس صورة احترافية متكاملة داخل بيئة العمل، تشمل القمصان، البناطيل،
                             البدلات الرسمية، والجاكيتات بشعار الشركة.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات راقية – قصّات مريحة – ألوان متناسقة تعكس
-                            هوية الشركة.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> الإدارات، مكاتب الشركات، البنوك، المدارس
-                            الخاصة.</p>
+                        <a href="#gallery-1" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 2. أزياء الضيافة والفنادق والمطاعم -->
@@ -89,10 +120,9 @@
                         <h3 class="item-title">أزياء الضيافة والفنادق والمطاعم</h3>
                         <p>تصميمات فاخرة تمنح طاقم العمل مظهرًا منظمًا يعكس جودة الخدمة. تشمل أزياء الطهاة، الندل، موظفي
                             الاستقبال، وعمال النظافة.</p>
-                        <p class="features"><strong>المميزات:</strong> تصميمات فاخرة – ألوان راقية – تحمل الشعار بلمسة
-                            عصرية.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> الفنادق، المقاهي، المطاعم، شركات التموين
-                            والضيافة.</p>
+                        <a href="#gallery-2" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 3. الأزياء الطبية والصحية -->
@@ -101,10 +131,9 @@
                         <h3 class="item-title">الأزياء الطبية والصحية</h3>
                         <p>أطقم طبية عملية تضمن راحة الحركة والنظافة والتعقيم العالي، مع لمسة أناقة. تشمل السكربات،
                             البالطوهات، أغطية الرأس، والأحذية الطبية.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات مضادة للبكتيريا – ألوان هادئة – مقاسات
-                            دقيقة.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> المستشفيات، العيادات، المختبرات، الصيدليات.
-                        </p>
+                        <a href="#gallery-3" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 4. الأزياء الصناعية والعمالية -->
@@ -113,10 +142,9 @@
                         <h3 class="item-title">الأزياء الصناعية والعمالية</h3>
                         <p>أزياء عمل متينة تتحمل بيئات العمل الشاقة، مع توفير أعلى درجات الأمان. تشمل بدلات العمل،
                             السترات العاكسة، والقفازات.</p>
-                        <p class="features"><strong>المميزات:</strong> مقاومة للتمزق – عواكس أمان – إمكانية الطباعة
-                            والتطريز.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> المصانع، الورش، المستودعات، المشاريع
-                            الإنشائية.</p>
+                        <a href="#gallery-4" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 5. الأزياء المدرسية -->
@@ -125,10 +153,9 @@
                         <h3 class="item-title">الأزياء المدرسية</h3>
                         <p>زي أنيق يعزز روح الانضباط والانتماء لدى الطلبة. نقدم تصاميم مريحة بخامات عملية تناسب مختلف
                             الأعمار والمواسم.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات متينة – ألوان ثابتة – تنفيذ دقيق حسب هوية
-                            المدرسة.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> المدارس الحكومية والأهلية والمعاهد
-                            التعليمية.</p>
+                        <a href="#gallery-5" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 6. أزياء النظافة والخدمات العامة -->
@@ -137,10 +164,9 @@
                         <h3 class="item-title">أزياء النظافة والخدمات العامة</h3>
                         <p>زي عملي يسهّل الحركة ويمنح العاملين مظهرًا منظمًا وموحدًا. نوفر بزّات خفيفة ومريلات مقاومة
                             للبقع، بألوان متعددة.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات قوية – تصميمات بسيطة ومريحة – أسعار
-                            اقتصادية.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> شركات النظافة، الخدمات العامة، شركات
-                            الصيانة.</p>
+                        <a href="#gallery-6" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 7. أزياء الأمن والحراسة -->
@@ -149,10 +175,9 @@
                         <h3 class="item-title">أزياء الأمن والحراسة</h3>
                         <p>رمز الانضباط والهيبة. نُصمم أطقم الأمن والحراسة بخامات عملية ومريحة مع الاهتمام بالتفاصيل
                             الدقيقة مثل الشارات والقبعات والشعارات المطرزة.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات عالية الجودة – قصّات رسمية – وضوح الهوية
-                            الأمنية.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> الشركات الأمنية، المصانع، المجمعات التجارية،
-                            المنشآت الحكومية.</p>
+                        <a href="#gallery-7" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 8. أزياء التجميل والصالونات -->
@@ -161,10 +186,9 @@
                         <h3 class="item-title">أزياء التجميل والصالونات</h3>
                         <p>لمسة أناقة تليق بجمال المكان. نُصمم مريلات وبدلات أنيقة مقاومة للبقع، تجمع بين الراحة والمظهر
                             العصري.</p>
-                        <p class="features"><strong>المميزات:</strong> ألوان أنيقة – خامات مريحة – تفصيل خاص باسم وشعار
-                            الصالون.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> صالونات التجميل، مراكز السبا، مراكز العناية
-                            بالبشرة.</p>
+                        <a href="#gallery-8" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
 
                     <!-- 9. أزياء الأطفال والمؤسسات الترفيهية -->
@@ -172,28 +196,119 @@
                         <div class="icon-box">👶</div>
                         <h3 class="item-title">أزياء الأطفال والمؤسسات الترفيهية</h3>
                         <p>ألوان مبهجة وخامات ناعمة تجعل الأطفال أكثر راحة وسعادة.</p>
-                        <p class="features"><strong>المميزات:</strong> خامات قطنية آمنة – تصاميم مرحة – ألوان جذابة.</p>
-                        <p class="suitable-for"><strong>مناسبة لـ:</strong> الحضانات، مراكز التعليم المبكر، النوادي
-                            الترفيهية.</p>
+                        <a href="#gallery-9" class="btn btn-secondary view-gallery-btn">
+                            <i class="fas fa-camera"></i> مشاهدة الصور
+                        </a>
                     </div>
+
                 </div>
             </div>
         </section>
+        <!-- قسم معرض الصور والفيديوهات (#gallery) -->
+        <!-- --------------------------------------- -->
         <section id="gallery" class="gallery-section">
             <div class="container">
                 <h2 class="section-title">معرض أعمالنا</h2>
-                <p class="section-description">شاهدوا عينات من أزياءنا الموحدة المنفذة لعملائنا في مختلف القطاعات. جودة
-                    التصميم والتفصيل تتحدث عن نفسها.</p>
+                <p class="section-description">نماذج من أزياءنا الموحدة المنفذة لعملائنا في مختلف القطاعات. جودة التصميم
+                    والتفصيل تتحدث عن نفسها.</p>
 
-                <!-- معرض الصور -->
-                <div class="image-gallery">
-                    <!-- يرجى تغيير "image-1.jpg" بصور حقيقية لأعمالكم -->
-                    <img src="images/photo9.jpeg" alt="زي موحد إداري" class="gallery-image">
-                    <img src="images/photo12.jpeg" alt="زي ضيافة فندقي" class="gallery-image">
-                    <img src="images/photo13.jpeg" alt="زي طبي سكرب" class="gallery-image">
-                    <img src="images/photo21.jpeg" alt="زي صناعي عامل" class="gallery-image">
-                    <img src="images/photo18.jpeg" alt="زي مدرسي" class="gallery-image">
-                    <img src="images/photo23.jpeg" alt="زي أمن وحراسة" class="gallery-image">
+                <!-- 1. معرض صور الأزياء الإدارية (ID: gallery-1) -->
+                <div id="gallery-1" class="sub-gallery">
+                    <h3 class="gallery-sub-title">1. صور الأزياء الإدارية والمكتبية</h3>
+                    <div class="image-gallery">
+                        <!-- يجب وضع 3 صور مرجعية للمثال -->
+                        <img src="uniforms/admin-1.jpg" alt="زي إداري 1" class="gallery-image">
+                        <img src="uniforms/admin-2.jpg" alt="زي إداري 2" class="gallery-image">
+                        <img src="uniforms/admin-3.jpg" alt="زي إداري 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 2. معرض صور أزياء الضيافة (ID: gallery-2) -->
+                <div id="gallery-2" class="sub-gallery">
+                    <h3 class="gallery-sub-title">2. صور أزياء الضيافة والفنادق والمطاعم</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/hospitality-1.jpg" alt="زي ضيافة 1" class="gallery-image">
+                        <img src="uniforms/hospitality-2.jpg" alt="زي ضيافة 2" class="gallery-image">
+                        <img src="uniforms/hospitality-3.jpg" alt="زي ضيافة 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 3. معرض صور الأزياء الطبية والصحية (ID: gallery-3) -->
+                <div id="gallery-3" class="sub-gallery">
+                    <h3 class="gallery-sub-title">3. صور الأزياء الطبية والصحية</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/medical-1.jpg" alt="زي طبي 1" class="gallery-image">
+                        <img src="uniforms/medical-2.jpg" alt="زي طبي 2" class="gallery-image">
+                        <img src="uniforms/medical-3.jpg" alt="زي طبي 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 4. معرض صور الأزياء الصناعية والعمالية (ID: gallery-4) -->
+                <div id="gallery-4" class="sub-gallery">
+                    <h3 class="gallery-sub-title">4. صور الأزياء الصناعية والعمالية</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/industrial-1.jpg" alt="زي صناعي 1" class="gallery-image">
+                        <img src="uniforms/industrial-2.jpg" alt="زي صناعي 2" class="gallery-image">
+                        <img src="uniforms/industrial-3.jpg" alt="زي صناعي 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 5. معرض صور الأزياء المدرسية (ID: gallery-5) -->
+                <div id="gallery-5" class="sub-gallery">
+                    <h3 class="gallery-sub-title">5. صور الأزياء المدرسية</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/school-1.jpg" alt="زي مدرسي 1" class="gallery-image">
+                        <img src="uniforms/school-2.jpg" alt="زي مدرسي 2" class="gallery-image">
+                        <img src="uniforms/school-3.jpg" alt="زي مدرسي 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 6. معرض صور أزياء النظافة والخدمات العامة (ID: gallery-6) -->
+                <div id="gallery-6" class="sub-gallery">
+                    <h3 class="gallery-sub-title">6. صور أزياء النظافة والخدمات العامة</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/cleaner-1.jpg" alt="زي نظافة 1" class="gallery-image">
+                        <img src="uniforms/cleaner-2.jpg" alt="زي نظافة 2" class="gallery-image">
+                        <img src="uniforms/cleaner-3.jpg" alt="زي نظافة 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 7. معرض صور أزياء الأمن والحراسة (ID: gallery-7) -->
+                <div id="gallery-7" class="sub-gallery">
+                    <h3 class="gallery-sub-title">7. صور أزياء الأمن والحراسة</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/security-1.jpg" alt="زي أمن 1" class="gallery-image">
+                        <img src="uniforms/security-2.jpg" alt="زي أمن 2" class="gallery-image">
+                        <img src="uniforms/security-3.jpg" alt="زي أمن 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 8. معرض صور أزياء التجميل والصالونات (ID: gallery-8) -->
+                <div id="gallery-8" class="sub-gallery">
+                    <h3 class="gallery-sub-title">8. صور أزياء التجميل والصالونات</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/beauty-1.jpg" alt="زي تجميل 1" class="gallery-image">
+                        <img src="uniforms/beauty-2.jpg" alt="زي تجميل 2" class="gallery-image">
+                        <img src="uniforms/beauty-3.jpg" alt="زي تجميل 3" class="gallery-image">
+                    </div>
+                </div>
+
+                <!-- 9. معرض صور أزياء الأطفال والمؤسسات الترفيهية (ID: gallery-9) -->
+                <div id="gallery-9" class="sub-gallery">
+                    <h3 class="gallery-sub-title">9. صور أزياء الأطفال والمؤسسات الترفيهية</h3>
+                    <div class="image-gallery">
+                        <!-- 3 صور مرجعية للمثال -->
+                        <img src="uniforms/kids-1.jpg" alt="زي أطفال 1" class="gallery-image">
+                        <img src="uniforms/kids-2.jpg" alt="زي أطفال 2" class="gallery-image">
+                        <img src="uniforms/kids-3.jpg" alt="زي أطفال 3" class="gallery-image">
+                    </div>
                 </div>
 
                 <!-- قسم الفيديوهات -->
@@ -218,59 +333,14 @@
             </div>
         </section>
 
-        <!-- قسم لماذا تختارنا -->
-        <section id="why-us" class="why-us-section">
-            <div class="container">
-                <div class="why-us-content">
-                    <h2 class="section-title">💎 لماذا تختار الماسة الذهبية للزي الموحد؟</h2>
-                    <ul class="features-list">
-                        <li><i class="fas fa-magic"></i> تصميمات احترافية تُنفذ خصيصًا لهوية كل منشأة.</li>
-                        <li><i class="fas fa-check-circle"></i> خامات عالية الجودة تناسب بيئة العمل وطبيعة النشاط.</li>
-                        <li><i class="fas fa-clock"></i> خدمة تنفيذ سريعة بدقة في المقاسات والألوان.</li>
-                        <li><i class="fas fa-paint-brush"></i> إمكانية الطباعة أو التطريز للشعار والعلامة التجارية.</li>
-                        <li><i class="fas fa-headset"></i> استشارات تصميم مجانية لتحقيق أفضل مظهر لفريق عملك.</li>
-                    </ul>
-                    <a href="tel:+966551445110" class="btn btn-primary big-cta-btn"><i class="fas fa-phone-alt"></i>
-                        اطلب عرض سعر الآن!</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم التواصل -->
-        <!-- <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">تواصل معنا</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <h3>للاتصال والاستفسار</h3>
-                        <p>الرقم الرسمي: <a href="tel:+966551445110">0551445110</a></p>
-                        <p>مندوب مبيعات: عبد الرحمن شريم</p>
-                        <p>هاتف آخر (كما في البطاقة): <a href="tel:0593057844">0593057844</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <h3>واتساب</h3>
-                        <a href="https://wa.me/966551445110" target="_blank" class="whatsapp-link">راسلنا عبر الواتساب
-                            (0551445110)</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>عنوان المؤسسة</h3>
-                        <p>الرياض - حي اليرموك</p>
-                        <p>المقصاة ٦٣٧١ ص. ب ١٣٢٥٠</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
     </main>
 
     <!-- في ملف index.html - استبدل محتوى الـ <footer> كاملاً -->
 
-    <footer class="main-footer"id="footer">
+    <footer class="main-footer" id="footer">
         <div class="container footer-grid">
 
-            <!-- العمود الأول: معلومات الاتصال (يمين) -->
+            <!-- العمود الأول (مُعدّل): معلومات الاتصال والهواتف والإيميلات -->
             <div class="footer-col contact-col">
                 <h3>معلومات الاتصال</h3>
 
@@ -280,15 +350,16 @@
                     <p>الرياض - حي اليرموك</p>
                     <p>المقصاة ٦٣٧١ ص. ب ١٣٢٥٠</p>
                     <!-- يمكنك إضافة رابط لخريطة هنا إذا توفر -->
-                    <a href="https://maps.app.goo.gl/YourMapLink" target="_blank" class="details-link">عرض التفاصيل
-                        الكاملة</a>
+                    <a href="https://maps.app.goo.gl/7ztUA4tjhJrhaXGc9" target="_blank" class="details-link">عرض التفاصيل
+                    الكاملة</a>
                 </div>
 
                 <div class="contact-item-footer">
                     <i class="fas fa-phone-alt"></i>
                     <h4>اتصال هاتفي:</h4>
                     <a href="tel:+966551445110" class="tel-link">الرقم الرسمي: 0551445110</a>
-                    <p>هاتف آخر (عبد الرحمن شريم): 0593057844</p>
+                    <!-- تم إلغاء الرقم 0593057844 واستبداله بالرقم الجديد -->
+                    <p>هاتف آخر (واتساب): <a href="tel:+966532950913">0532950913</a></p>
                 </div>
 
                 <div class="contact-item-footer">
@@ -299,8 +370,23 @@
                 </div>
             </div>
 
-            <!-- العمود الثاني: روابط سريعة (وسط) -->
-            <div class="footer-col links-col">
+            <!-- العمود الثاني (جديد): البريد الإلكتروني (الأهم) -->
+            <div class="footer-col email-col">
+                <h3>البريد الإلكتروني</h3>
+                <div class="contact-item-footer">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:Info@Almasagolden.com">Info@Almasagolden.com</a></p>
+                    <p><a href="mailto:Hr@Almasagolden.com">Hr@Almasagolden.com</a> </p>
+                    <p><a href="mailto:Sales@Almasagolden.com">Sales@Almasagolden.com</a> </p>
+                    <p><a href="mailto:Manger@Almasagolden.com">Manger@Almasagolden.com</a> </p>
+                    <p><a href="mailto:CEO@Almasagolden.com">CEO@Almasagolden.com</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- العمود الثالث (مُعدّل): روابط سريعة وتابعنا وتواصل معنا -->
+            <div class="footer-col links-social-col">
                 <h3>روابط سريعة</h3>
                 <ul>
                     <li><a href="#home">الرئيسية</a></li>
@@ -308,24 +394,17 @@
                     <li><a href="#gallery">معرض الأعمال</a></li>
                     <li><a href="#why-us">لماذا نختارنا؟</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
-                    <!-- يمكنك إضافة المزيد من الروابط مثل (سياسة الخصوصية، المدونة، إلخ) -->
                 </ul>
-            </div>
 
-            <!-- العمود الثالث: تابعنا وتواصل معنا (يسار) -->
-            <div class="footer-col social-col">
-                <h3>تابعنا وتواصل معنا</h3>
+                <h3 class="social-title">تابعنا وتواصل معنا</h3>
                 <p>تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</p>
                 <div class="social-icons">
-                    <!-- يرجى استبدال الروابط بعناوين صفحاتكم -->
                     <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                 </div>
-                <!-- زر التواصل المباشر (مثل زر الصورة) -->
                 <a href="#contact" class="btn-footer-cta">تواصل معنا</a>
             </div>
-
         </div>
 
         <!-- شريط الحقوق والتصميم -->
@@ -334,7 +413,7 @@
                 <p>&copy; 2024 جميع الحقوق محفوظة لمؤسسة الماسة الذهبية للزي الموحد.</p>
                 <p>Design and programming by<a
                         href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
-                        target="_blank"><strong style="color: aliceblue;">GMTWEB</strong> </a> </p>
+                        target="_blank"><strong style="color: #c7a000;">GMTWEB</strong> </a> </p>
             </div>
         </div>
 
@@ -349,7 +428,6 @@
             </a>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
