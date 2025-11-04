@@ -6,6 +6,8 @@ body {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.8;
+        overflow-x: hidden; 
+
 }
 
 /* الألوان الأساسية */
@@ -19,7 +21,8 @@ body {
     --section-bg: #eeeeee;
 }
 html {
-    scroll-behavior: smooth; /* الخاصية الأهم: تجعل الانتقال ناعماً عند النقر على الروابط الداخلية */
+    scroll-behavior: smooth; 
+    /* overflow-x: hidden; */
 }
 /* حاوية المحتوى */
 .container {
