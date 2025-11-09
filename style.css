@@ -6,24 +6,31 @@ body {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.8;
-    overflow-x: hidden; 
-
+    overflow-x: hidden;
+    /* padding-top: 60px; 
+    padding-left: 0; 
+    padding-right: 0; */
 }
 
 /* الألوان الأساسية */
 :root {
-    --primary-color: #262626; /* أسود داكن لشريط التنقل */
-    --secondary-color: #c7a000; /* ذهبي (الماسة الذهبية) */
-    --whatsapp-color: #25D366; 
-    --hero-bg-color: #434658; /* لون الخلفية الداكن الجديد لقسم الهيرو */
+    --primary-color: #262626;
+    /* أسود داكن لشريط التنقل */
+    --secondary-color: #c7a000;
+    /* ذهبي (الماسة الذهبية) */
+    --whatsapp-color: #25D366;
+    --hero-bg-color: #434658;
+    /* لون الخلفية الداكن الجديد لقسم الهيرو */
     --light-color: #ffffff;
     --dark-color: #333333;
     --section-bg: #eeeeee;
 }
+
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 /* حاوية المحتوى */
 .container {
     width: 90%;
@@ -31,12 +38,15 @@ html {
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .menu-toggle {
-    display: none; /* تم التعديل: إخفاؤه افتراضياً */
+    display: none;
+    /* تم التعديل: إخفاؤه افتراضياً */
     color: var(--light-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 /* تنسيق الهيدر والتنقل */
 header {
     background-color: var(--primary-color);
@@ -45,13 +55,15 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 .contact-button .btn-primary {
     background-color: var(--secondary-color);
     color: var(--dark-color);
     border-color: var(--secondary-color);
-    padding: 8px 15px; 
+    padding: 8px 15px;
     font-size: 0.9rem;
-    border-radius: 5px; /* شكل مربع أكثر في الهيدر */
+    border-radius: 5px;
+    /* شكل مربع أكثر في الهيدر */
 }
 
 nav {
@@ -62,16 +74,17 @@ nav {
 }
 
 .logo {
-    display: flex; /* لجعل النص والصورة متجاورين */
+    display: flex;
     align-items: center;
-    gap: 10px; /* المسافة بين اللوجو والنص */
+    gap: 10px;
+    /* المسافة بين اللوجو والنص */
 }
 
 .logo-img {
-    width: 50px; 
+    width: 50px;
     height: 35px;
     object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); 
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 .logo a {
@@ -108,13 +121,13 @@ nav {
 /* تنسيق الأزرار العامة */
 .btn {
     display: inline-flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 30px; 
+    border-radius: 30px;
     transition: background-color 0.3s, transform 0.2s;
     border: 2px solid;
 }
@@ -131,12 +144,13 @@ nav {
 }
 
 .btn-secondary {
-    background-color: transparent; 
+    background-color: transparent;
     color: var(--light-color);
     border-color: var(--light-color);
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
     transform: translateY(-2px);
     opacity: 0.9;
 }
@@ -145,7 +159,7 @@ nav {
 /* تنسيق قسم البطل (Hero Section) */
 /* --------------------------------- */
 .hero-section {
-     position: relative;
+    position: relative;
     /* إضافة صورة الخلفية مع تظليل مناسب */
     /* background: var(--hero-bg-color) url('images/photo1.jpeg') center center no-repeat; */
     background-size: cover;
@@ -157,13 +171,13 @@ nav {
 }
 
 .hero-overlay {
-     background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-     z-index: 1;
+    z-index: 1;
 }
 
 .hero-content {
@@ -191,6 +205,7 @@ nav {
     padding: 15px 35px;
     font-size: 1.2rem;
 }
+
 .btn-secondary.whatsapp-hero-btn {
     background-color: var(--whatsapp-color);
     border-color: var(--whatsapp-color);
@@ -208,20 +223,23 @@ nav {
 }
 
 .hero-buttons {
-     display: flex;
+    display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.call-btn, .whatsapp-hero-btn {
+.call-btn,
+.whatsapp-hero-btn {
     padding: 15px 35px;
     font-size: 1.2rem;
 }
+
 /* 1. الحالة الأولية: جميع العناصر مخفية وتنتظر التفعيل */
 .hero-target {
     opacity: 0;
-    transform: translateY(-30px); /* يبدأ من الأعلى */
-    transition: all 0.8s ease-out; 
+    transform: translateY(-30px);
+    /* يبدأ من الأعلى */
+    transition: all 0.8s ease-out;
 }
 
 /* 2. حالة التفعيل: يعود إلى مكانه الأصلي */
@@ -231,21 +249,22 @@ nav {
 }
 
 /* 3. تطبيق التأخير الزمني عند التفعيل */
-.hero-content h1.hero-target.show { 
-    transition-delay: 0.2s; 
+.hero-content h1.hero-target.show {
+    transition-delay: 0.2s;
 }
 
-.hero-content h2.hero-target.show { 
-    transition-delay: 0.5s; 
+.hero-content h2.hero-target.show {
+    transition-delay: 0.5s;
 }
 
-.hero-content p.hero-target.show { 
-    transition-delay: 0.8s; 
+.hero-content p.hero-target.show {
+    transition-delay: 0.8s;
 }
 
-.hero-buttons.hero-target.show { 
-    transition-delay: 1.1s; 
+.hero-buttons.hero-target.show {
+    transition-delay: 1.1s;
 }
+
 /* تنسيق زر الواتساب في الهيرو */
 .whatsapp-hero-btn {
     background-color: var(--whatsapp-color);
@@ -259,20 +278,21 @@ nav {
     top: 0;
     left: 0;
     /* التعديل 1: العرض لـ 5 صور */
-    width: 500%; 
+    width: 500%;
     height: 100%;
     display: flex;
-    
+
     /* التعديل 2: زيادة المدة لتكون الحركة أهدأ مع 5 صور */
-    animation: slideShow 25s linear infinite; /* 25 ثانية، حركة مستمرة وهادئة */
+    animation: slideShow 25s linear infinite;
+    /* 25 ثانية، حركة مستمرة وهادئة */
 }
 
 .background-slider img {
-    width: 20%; 
+    width: 20%;
     height: 100%;
     /* التعديل 4: العودة إلى 'cover' لملء الشاشة بالكامل */
-    object-fit: cover; 
-    
+    object-fit: cover;
+
     display: block;
 
 }
@@ -282,30 +302,72 @@ nav {
 /* --------------------------------- */
 @keyframes slideShow {
     /* كل صورة هي 20%، سنعطي 3% للانتقال و 17% للتوقف */
-    
+
     /* الصورة 1 */
-    0% { transform: translateX(0); }
-    17% { transform: translateX(0); } /* توقف */
-    
+    0% {
+        transform: translateX(0);
+    }
+
+    17% {
+        transform: translateX(0);
+    }
+
+    /* توقف */
+
     /* الصورة 2 */
-    20% { transform: translateX(-20%); } /* انزلاق 1 */
-    37% { transform: translateX(-20%); } /* توقف */
-    
+    20% {
+        transform: translateX(-20%);
+    }
+
+    /* انزلاق 1 */
+    37% {
+        transform: translateX(-20%);
+    }
+
+    /* توقف */
+
     /* الصورة 3 */
-    40% { transform: translateX(-40%); } /* انزلاق 2 */
-    57% { transform: translateX(-40%); } /* توقف */
-    
+    40% {
+        transform: translateX(-40%);
+    }
+
+    /* انزلاق 2 */
+    57% {
+        transform: translateX(-40%);
+    }
+
+    /* توقف */
+
     /* الصورة 4 */
-    60% { transform: translateX(-60%); } /* انزلاق 3 */
-    77% { transform: translateX(-60%); } /* توقف */
-    
+    60% {
+        transform: translateX(-60%);
+    }
+
+    /* انزلاق 3 */
+    77% {
+        transform: translateX(-60%);
+    }
+
+    /* توقف */
+
     /* الصورة 5 */
-    80% { transform: translateX(-80%); } /* انزلاق 4 */
-    97% { transform: translateX(-80%); } /* توقف */
-    
+    80% {
+        transform: translateX(-80%);
+    }
+
+    /* انزلاق 4 */
+    97% {
+        transform: translateX(-80%);
+    }
+
+    /* توقف */
+
     /* العودة للبداية */
-    100% { transform: translateX(0); } 
+    100% {
+        transform: translateX(0);
+    }
 }
+
 /* --------------------------------- */
 /* تنسيق الأقسام الداخلية */
 /* --------------------------------- */
@@ -329,26 +391,59 @@ main section {
 }
 
 .about-section {
-    background-color: var(--light-color); /* خلفية بيضاء لتميزها عن الخدمات */
+    background-color: var(--light-color);
+    /* خلفية بيضاء لتميزها عن الخدمات */
 }
+
 .about-target {
     opacity: 0;
-    transition: all 0.8s ease-out; /* فترة الانتقال عند التفعيل */
+    transition: all 0.8s ease-out;
+    /* فترة الانتقال عند التفعيل */
+}
+.about-main-video {
+    width: 100%;
+    /* --------------------------------- */
+    /* التعديل: استبدال .about-main-img بـ .about-main-video */
+    max-width: 350px; 
+    height: auto;
+    object-fit: cover; /* لملء الحاوية بالكامل */
+    /* --------------------------------- */
+    
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--secondary-color); /* إطار ذهبي */
 }
 
 /* 2. إضافة حركات الدخول التي ستظهر عند تفعيل فئة .show */
 .about-target.show {
     opacity: 1;
-    transform: none; /* إلغاء أي تحريك أولي */
+    transform: none;
+    /* إلغاء أي تحريك أولي */
 }
 
 /* تطبيق تأثيرات الحركة على كل عنصر عند التفعيل (مع تأخير) */
 
 /* تأثير الدخول من الأعلى للنصوص (FadeInDown) */
-.about-target:nth-child(1) { transform: translateY(-30px); } /* العنوان */
-.about-target:nth-child(2) { transform: translateY(-30px); } /* النص البارز */
-.about-target:nth-child(3) { transform: translateY(-30px); } /* الفقرة 2 */
-.about-target:nth-child(4) { transform: translateY(-30px); } /* الفقرة 3 */
+.about-target:nth-child(1) {
+    transform: translateY(-30px);
+}
+
+/* العنوان */
+.about-target:nth-child(2) {
+    transform: translateY(-30px);
+}
+
+/* النص البارز */
+.about-target:nth-child(3) {
+    transform: translateY(-30px);
+}
+
+/* الفقرة 2 */
+.about-target:nth-child(4) {
+    transform: translateY(-30px);
+}
+
+/* الفقرة 3 */
 
 /* تأثير التكبير للصورة (ZoomIn) */
 .about-image-box.about-target {
@@ -357,22 +452,40 @@ main section {
 }
 
 /* تطبيق التأخير الزمني عند التفعيل */
-.about-target.show:nth-child(1) { transition-delay: 0.2s; }
-.about-target.show:nth-child(2) { transition-delay: 0.5s; }
-.about-target.show:nth-child(3) { transition-delay: 0.8s; }
-.about-target.show:nth-child(4) { transition-delay: 1.1s; }
-.about-target.show:nth-child(5) { transition-delay: 1.4s; } /* زر التواصل */
+.about-target.show:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.about-target.show:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.about-target.show:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.about-target.show:nth-child(4) {
+    transition-delay: 1.1s;
+}
+
+.about-target.show:nth-child(5) {
+    transition-delay: 1.4s;
+}
+
+/* زر التواصل */
 
 /* التأخير لصندوق الصورة - يجب تطبيق التأخير على الـ box كله */
-.about-content-grid .about-target:last-child { 
-    transition-delay: 1.7s; 
+.about-content-grid .about-target:last-child {
+    transition-delay: 1.7s;
 }
 
 /* تنسيق العنوان وتعديله ليناسب هذا القسم */
 .about-section .section-title {
     text-align: right;
-    font-size: 2.2rem; /* تصغير حجم العنوان قليلاً ليكون مناسباً للنص */
-    color: var(--primary-color); /* لون داكن للعنوان */
+    font-size: 2.2rem;
+    /* تصغير حجم العنوان قليلاً ليكون مناسباً للنص */
+    color: var(--primary-color);
+    /* لون داكن للعنوان */
     margin-bottom: 25px;
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 5px;
@@ -385,31 +498,34 @@ main section {
     align-items: center;
     flex-wrap: wrap;
     /* التعديل: زيادة التوزيع للعرض الأفضل */
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .about-text {
     /* التعديل: إعطاء النص مساحة أكبر قليلاً */
-    flex: 1.5; 
+    flex: 1.5;
     min-width: 300px;
 }
 
 .about-image-box {
     /* التعديل: إعطاء الصورة مساحة أقل قليلاً */
-    flex: 1; 
-    min-width: 250px; /* تقليل الحد الأدنى للعرض */
+    flex: 1;
+    min-width: 250px;
+    /* تقليل الحد الأدنى للعرض */
     text-align: center;
 }
 
 .about-main-img {
     width: 100%;
     /* التعديل الأهم: تصغير الحجم الأقصى للصور */
-    max-width: 350px; /* تم التصغير من 500px إلى 350px */
+    max-width: 350px;
+    /* تم التصغير من 500px إلى 350px */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--secondary-color); 
+    border: 3px solid var(--secondary-color);
 }
+
 .lead-text {
     font-size: 1.2rem;
     font-weight: bold;
@@ -419,6 +535,7 @@ main section {
 .about-contact-cta {
     margin-top: 30px;
 }
+
 /* --------------------------------- */
 /* تنسيق قسم الخدمات (uniforms-section) */
 /* --------------------------------- */
@@ -463,12 +580,14 @@ main section {
     display: inline-block;
 }
 
-.features, .suitable-for {
+.features,
+.suitable-for {
     font-size: 0.95rem;
     margin-top: 10px;
 }
 
-.features strong, .suitable-for strong {
+.features strong,
+.suitable-for strong {
     color: var(--secondary-color);
 }
 
@@ -500,8 +619,10 @@ main section {
 /* 1. الحالة الأولية: جميع البطاقات مخفية وتنتظر التفعيل */
 .uniform-target {
     opacity: 0;
-    transform: translateY(50px); /* تبدأ من الأسفل */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* حركة ناعمة */
+    transform: translateY(50px);
+    /* تبدأ من الأسفل */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* حركة ناعمة */
 }
 
 /* 2. حالة التفعيل: تعود إلى مكانها الأصلي وتظهر */
@@ -511,15 +632,41 @@ main section {
 }
 
 /* 3. تطبيق التأخير الزمني التتابعي (لتظهر البطاقات واحدة تلو الأخرى) */
-.uniform-grid .uniform-target:nth-child(1).show { transition-delay: 0.1s; }
-.uniform-grid .uniform-target:nth-child(2).show { transition-delay: 0.2s; }
-.uniform-grid .uniform-target:nth-child(3).show { transition-delay: 0.3s; }
-.uniform-grid .uniform-target:nth-child(4).show { transition-delay: 0.4s; }
-.uniform-grid .uniform-target:nth-child(5).show { transition-delay: 0.5s; }
-.uniform-grid .uniform-target:nth-child(6).show { transition-delay: 0.6s; }
-.uniform-grid .uniform-target:nth-child(7).show { transition-delay: 0.7s; }
-.uniform-grid .uniform-target:nth-child(8).show { transition-delay: 0.8s; }
-.uniform-grid .uniform-target:nth-child(9).show { transition-delay: 0.9s; }
+.uniform-grid .uniform-target:nth-child(1).show {
+    transition-delay: 0.1s;
+}
+
+.uniform-grid .uniform-target:nth-child(2).show {
+    transition-delay: 0.2s;
+}
+
+.uniform-grid .uniform-target:nth-child(3).show {
+    transition-delay: 0.3s;
+}
+
+.uniform-grid .uniform-target:nth-child(4).show {
+    transition-delay: 0.4s;
+}
+
+.uniform-grid .uniform-target:nth-child(5).show {
+    transition-delay: 0.5s;
+}
+
+.uniform-grid .uniform-target:nth-child(6).show {
+    transition-delay: 0.6s;
+}
+
+.uniform-grid .uniform-target:nth-child(7).show {
+    transition-delay: 0.7s;
+}
+
+.uniform-grid .uniform-target:nth-child(8).show {
+    transition-delay: 0.8s;
+}
+
+.uniform-grid .uniform-target:nth-child(9).show {
+    transition-delay: 0.9s;
+}
 
 .uniforms-section {
     background-color: var(--section-bg);
@@ -561,7 +708,8 @@ main section {
 .view-gallery-btn {
     display: block;
     width: 80%;
-    margin: 15px auto 0 auto; /* توسيط الزر أسفل العنصر */
+    margin: 15px auto 0 auto;
+    /* توسيط الزر أسفل العنصر */
     background-color: var(--primary-color);
     color: var(--light-color);
     border-color: var(--primary-color);
@@ -611,28 +759,25 @@ main section {
 
 /* تنسيق معرض الصور (شبكة صور) */
 .image-gallery {
-    /* تم التعديل: زيادة الحد الأدنى للعرض لعمود واحد في الشبكة */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; /* زيادة التباعد بين الصور لتبدو أكثر تنظيماً */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     margin-bottom: 40px;
+        grid-auto-rows: 1fr; 
+
 }
 
 .gallery-image {
     width: 100%;
-    /* --------------------------------- */
-    /* التعديل: إعادة تعيين ارتفاع بسيط للصور لتثبيتها في الـ Grid */
-    display: block; /* لضمان أن الصورة تتصرف بشكل صحيح داخل الـ Grid */
-    height: 350px; /* تم إرجاع ارتفاع ثابت (أو شبه ثابت) لتحسين شكل الـ Grid */
-    object-fit: cover; /* تم التعديل: استخدام cover لملء الإطار دون فوضى */
-    /* --------------------------------- */
-    
+    display: block;
+    height: 380px;
+    object-fit: contain;
     border-radius: 8px;
-    background-color: var(--light-color); /* خلفية بيضاء للإطار */
+    background-color: var(--light-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    padding: 10px; /* تقليل البادينج */
-    border: 1px solid #ddd; /* إضافة إطار خفيف */
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 .gallery-image:hover {
@@ -643,13 +788,14 @@ main section {
 /* تنسيق معرض الفيديوهات */
 .video-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* نسبة 16:9 للحفاظ على أبعاد الفيديو */
+    padding-bottom: 56.25%;
+    /* نسبة 16:9 للحفاظ على أبعاد الفيديو */
     height: 0;
     overflow: hidden;
     background-color: #000;
@@ -705,9 +851,9 @@ main section {
 
 /* تنسيق الـ Footer الرئيسي */
 .main-footer {
-    background-color: #262626; 
+    background-color: #262626;
     color: var(--light-color);
-    padding: 60px 0 0 0; 
+    padding: 60px 0 0 0;
     position: relative;
     font-size: 1rem;
 }
@@ -722,7 +868,7 @@ main section {
 
 .footer-col {
     /* تم تغيير عرض العمود لاستيعاب 3 أعمدة بشكل أفضل */
-    flex-basis: 30%; 
+    flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 30px;
 }
@@ -732,7 +878,7 @@ main section {
     font-size: 1.5rem;
     margin-bottom: 25px;
     padding-bottom: 5px;
-    border-bottom: 2px solid var(--secondary-color); 
+    border-bottom: 2px solid var(--secondary-color);
     display: inline-block;
 }
 
@@ -763,18 +909,20 @@ main section {
     margin-bottom: 8px;
 }
 
-.contact-item-footer p, 
+.contact-item-footer p,
 .contact-item-footer a {
     color: #ccc;
     text-decoration: none;
     display: block;
     margin-top: 5px;
 }
+
 .contact-item-footer a:hover {
     color: var(--secondary-color);
 }
 
-.details-link, .whatsapp-link-footer {
+.details-link,
+.whatsapp-link-footer {
     color: var(--secondary-color) !important;
     text-decoration: underline !important;
     font-size: 0.9rem;
@@ -833,7 +981,7 @@ main section {
 
 .btn-footer-cta {
     display: inline-block;
-    background-color: #ff8c00; 
+    background-color: #ff8c00;
     color: var(--light-color);
     padding: 10px 20px;
     border-radius: 5px;
@@ -846,13 +994,14 @@ main section {
 
 /* شريط الحقوق (الأسفل) */
 .copyright-bar {
-    background-color: #262626; 
+    background-color: #262626;
     padding: 15px 0;
     text-align: center;
     font-size: 0.85rem;
     color: #999;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 /* ... (باقي التنسيقات العائمة و Media Queries) ... */
 
 /* التعديل في Mobile Responsiveness لترتيب الفوتر */
@@ -863,7 +1012,7 @@ main section {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-col {
         flex-basis: 100%;
         min-width: unset;
@@ -888,7 +1037,7 @@ main section {
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
-    left: 20px; 
+    left: 20px;
     z-index: 1000;
 }
 
@@ -916,7 +1065,7 @@ main section {
     bottom: 20px;
     left: 20px;
     z-index: 1000;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
@@ -924,13 +1073,15 @@ main section {
 /* تنسيق الأزرار العائمة الأساسي */
 .floating-btn {
     display: block;
-    width: 55px; /* تصغير الحجم قليلاً ليناسب الزرين */
+    width: 55px;
+    /* تصغير الحجم قليلاً ليناسب الزرين */
     height: 55px;
     line-height: 55px;
     text-align: center;
     color: var(--light-color);
     border-radius: 50%;
-    font-size: 1.8rem; /* تصغير حجم الأيقونة قليلاً */
+    font-size: 1.8rem;
+    /* تصغير حجم الأيقونة قليلاً */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s;
 }
@@ -941,53 +1092,103 @@ main section {
 
 /* 1. زر الاتصال (ذهبي) */
 .call-float-btn {
-    background-color: var(--secondary-color); /* اللون الذهبي */
+    background-color: var(--secondary-color);
+    /* اللون الذهبي */
 }
 
 /* 2. زر الواتساب (أخضر) */
 .whatsapp-float-btn {
-    background-color: var(--whatsapp-color); /* اللون الأخضر */
+    background-color: var(--whatsapp-color);
+    /* اللون الأخضر */
+}
+.video-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* عمودين في الديسكتوب */
+    gap: 20px;
 }
 
+/* حاوية الفيديو للحفاظ على نسبة الأبعاد (16:9) */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق وسم <video> الجديد لملء الحاوية */
+.video-wrapper .gallery-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* مهم لملء الإطار وعدم ترك حواف سوداء */
+    border: none;
+}
 /* --------------------------------- */
 /* -- التنسيق المتجاوب (Mobile Responsiveness) -- */
 /* --------------------------------- */
 @media (max-width: 900px) {
-    
+
     /* --------------------------------- */
     /* تحسين الهيدر في الموبايل */
     /* --------------------------------- */
 
-    .nav-links { display: none; }
-    .contact-button { display: none; } /* إخفاء زر "اتصل الآن" المزدحم في الهيدر */
-    .menu-toggle { display: block; } /* إظهار زر القائمة (3 شرطات) */
-    
+    .nav-links {
+        display: none;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    /* إخفاء زر "اتصل الآن" المزدحم في الهيدر */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* إظهار زر القائمة (3 شرطات) */
+
     .nav-links.active {
         display: flex;
         flex-direction: column;
         width: 100%;
         background-color: var(--primary-color);
         position: absolute;
-        top: 55px; /* تحت الهيدر */
+        top: 55px;
+        /* تحت الهيدر */
         left: 0;
     }
 
     /* تكبير حجم الخطوط الرئيسية */
-    .section-title { font-size: 2rem; }
-    .hero-content h1 { font-size: 2rem; }
-    .hero-content h2 { font-size: 1.8rem; }
-    
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
     /* تنسيق أزرار الهيرو */
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
     }
-     .about-content-grid {
+
+    .about-content-grid {
         flex-direction: column;
         gap: 30px;
     }
-    
-    .about-text, .about-image-box {
+
+    .about-text,
+    .about-image-box {
         min-width: 100%;
     }
 
@@ -996,7 +1197,7 @@ main section {
         margin-right: auto;
         margin-left: auto;
     }
-    
+
     /* .call-btn, .whatsapp-hero-btn {
         width: 100%;
         padding: 12px 25px;
@@ -1011,7 +1212,8 @@ main section {
 
     /* تنسيق معرض الفيديوهات */
     .video-gallery {
-        grid-template-columns: 1fr; /* عمود واحد للفيديوهات في وضع الهاتف */
+        grid-template-columns: 1fr;
+        /* عمود واحد للفيديوهات في وضع الهاتف */
     }
 
     /* تنسيق قسم التواصل */
@@ -1019,60 +1221,75 @@ main section {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .contact-item {
         border-right: none;
         border-bottom: 2px solid var(--secondary-color);
     }
+
     .contact-item:last-child {
         border-bottom: none;
     }
-    
+
     /* --------------------------------- */
     /* الأزرار العائمة في وضع الهاتف */
     /* --------------------------------- */
     .floating-contact-group {
-        flex-direction: column; /* تم التعديل: لجعلها فوق بعضها (موبايل) */
-        left: 20px; /* العودة إلى اليسار لعدم التوسيط */
-        transform: none; /* إلغاء التوسيط */
+        flex-direction: column;
+        /* تم التعديل: لجعلها فوق بعضها (موبايل) */
+        left: 20px;
+        /* العودة إلى اليسار لعدم التوسيط */
+        transform: none;
+        /* إلغاء التوسيط */
         bottom: 10px;
         gap: 10px;
     }
-    
+
     .floating-btn {
-        width: 60px; 
+        width: 60px;
         height: 60px;
         line-height: 60px;
         font-size: 1.8rem;
     }
+
     .uniform-item {
         flex-basis: 100%;
         min-width: unset;
     }
-    
+
     /* تنسيق زر مشاهدة الصور في الموبايل */
     .view-gallery-btn {
         width: 100%;
         margin-right: auto;
         margin-left: auto;
     }
-     .sub-gallery {
+
+    .sub-gallery {
         padding-left: 15px;
-        padding-right: 15px; 
+        padding-right: 15px;
     }
-    
+
     .image-gallery {
-        grid-template-columns: 1fr; /* عمود واحد في وضع الهاتف */
+        grid-template-columns: 1fr;
         gap: 20px;
-        /* التعديل: توسيط صور الشبكة */
-        justify-items: center; 
+        justify-items: center;
+        grid-auto-rows: auto;
+
     }
-    
+
     .gallery-image {
-        height: 300px;
-        max-width: 95%; /* تحديد أقصى عرض لتجنب تجاوز الشاشة */
-        width: 100%; /* يجب أن يكون 100% داخل الـ max-width */
-        margin: 0 auto; /* توسيط الصورة نفسها داخل الخلية */
+        height: auto;
+        max-width: 95%;
+        width: 100%;
+        margin: 0 auto;
+         padding: 10px;
+    }
+    .about-main-video {
+        /* التأكد من أن الفيديو لا يخرج عن حدود الشاشة */
+        max-width: 100%; 
+    }
+    .video-gallery {
+        grid-template-columns: 1fr; /* عمود واحد للفيديوهات في وضع الهاتف */
     }
 }
 
@@ -1085,6 +1302,7 @@ main section {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -1097,6 +1315,7 @@ main section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -1107,10 +1326,13 @@ main section {
 @keyframes zoomIn {
     0% {
         opacity: 0;
-        transform: scale(0.8); /* تبدأ بحجم 80% */
+        transform: scale(0.8);
+        /* تبدأ بحجم 80% */
     }
+
     100% {
         opacity: 1;
-        transform: scale(1); /* تنتهي بحجم 100% */
+        transform: scale(1);
+        /* تنتهي بحجم 100% */
     }
 }
