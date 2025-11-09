@@ -7,9 +7,9 @@ body {
     color: #333;
     line-height: 1.8;
     overflow-x: hidden;
-    /* padding-top: 60px; 
+    padding-top: 60px; 
     padding-left: 0; 
-    padding-right: 0; */
+    padding-right: 0;
 }
 
 /* الألوان الأساسية */
@@ -51,7 +51,8 @@ html {
 header {
     background-color: var(--primary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
 }
@@ -81,10 +82,10 @@ nav {
 }
 
 .logo-img {
-    width: 50px;
+    width: 70px;
     height: 35px;
     object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) brightness(1.2); 
 }
 
 .logo a {
@@ -1136,6 +1137,9 @@ main section {
     /* --------------------------------- */
     /* تحسين الهيدر في الموبايل */
     /* --------------------------------- */
+    body {
+        padding-top: 50px !important; 
+    }
 
     .nav-links {
         display: none;
