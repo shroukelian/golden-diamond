@@ -24,6 +24,8 @@ body {
     --light-color: #ffffff;
     --dark-color: #333333;
     --section-bg: #eeeeee;
+    --header-bg-color: #f7f7f7; 
+
 }
 
 html {
@@ -42,14 +44,14 @@ html {
 .menu-toggle {
     display: none;
     /* تم التعديل: إخفاؤه افتراضياً */
-    color: var(--light-color);
+    color: var(--dark-color);
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 /* تنسيق الهيدر والتنقل */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--header-bg-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
@@ -85,7 +87,7 @@ nav {
     width: 70px;
     height: 35px;
     object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) brightness(1.2); 
+    filter: none; 
 }
 
 .logo a {
@@ -103,7 +105,7 @@ nav {
 }
 
 .nav-links li a {
-    color: var(--light-color);
+    color: var(--dark-color);
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -787,7 +789,7 @@ main section {
 }
 
 /* تنسيق معرض الفيديوهات */
-.video-gallery {
+/* .video-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -796,11 +798,23 @@ main section {
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-    /* نسبة 16:9 للحفاظ على أبعاد الفيديو */
     height: 0;
     overflow: hidden;
     background-color: #000;
     border-radius: 8px;
+} */
+.video-wrapper .gallery-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* --------------------------------- */
+    /* التعديل: استخدام contain لرؤية الفيديو كاملاً دون قص */
+    object-fit: contain; 
+    /* --------------------------------- */
+    border: none;
+    background-color: #333; /* إضافة خلفية داكنة لملء الفراغات الناتجة عن الـ 'contain' */
 }
 
 .video-wrapper iframe {
